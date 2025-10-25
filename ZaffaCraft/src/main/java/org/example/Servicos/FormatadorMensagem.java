@@ -5,16 +5,12 @@ import org.example.Modelos.Players;
 
 public class FormatadorMensagem {
 
-    public String formatador() {
-        ConsomeApi consomeApi = new ConsomeApi();
-        ConverteDadosServidor converteDadosServidor = new ConverteDadosServidor();
-        String json = consomeApi.obterDados("https://api.mcsrvstat.us/3/bmc.mc-complex.com");
-        DadosServidor dadosServidor = converteDadosServidor.obterDados(json, DadosServidor.class);
+    public String formatador(DadosServidor dadosServidor) {
         Players players = dadosServidor.players();
 
         String statusMensagem = dadosServidor.status() ? "Online ✅" : "Offline ❌";
 
-        String textoFormatado = String.format("""
+        return String.format("""
                             Nome: %s
                             Status: %s
                             Versão: %s
@@ -26,7 +22,6 @@ public class FormatadorMensagem {
                 dadosServidor.versao(),
                 players.jogadoresOnline(),
                 players.maxJogadores()
-            );
-        return textoFormatado;
+        );
     }
 }
