@@ -40,4 +40,3 @@ Esses dados são então formatados e enviados para um canal do Discord por meio 
 - Maven configurado no sistema  
 - Token de bot do Discord válido  
 - Acesso à API [mcsrvstat.us](https://api.mcsrvstat.us)
-"@ | Out-File -Encoding utf8 README.md
