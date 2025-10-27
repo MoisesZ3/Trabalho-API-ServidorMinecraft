@@ -27,7 +27,6 @@ public class Mensagens extends ListenerAdapter {
         String[] mensagem = event.getMessage().getContentRaw().split(" ");
         MessageChannel channel = event.getChannel();
 
-
         switch (mensagem[0]) {
             case "!" + "dados"->
                 channel.sendMessage(mensagemCompleta.formatador(dadosServidor)).queue();
@@ -41,6 +40,8 @@ public class Mensagens extends ListenerAdapter {
                 channel.sendMessage(String.valueOf(players.jogadoresOnline())).queue();
             case "!" + "jogadoresMax"->
                 channel.sendMessage(String.valueOf(players.maxJogadores())).queue();
+            default ->
+                    channel.sendMessage("Esse código não existe nesse servidor").queue();
         }
     }
 }
