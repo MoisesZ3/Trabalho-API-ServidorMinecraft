@@ -41,7 +41,7 @@ public class Mensagens extends ListenerAdapter {
             case "!" + "jogadoresMax"->
                 channel.sendMessage(String.valueOf(players.maxJogadores())).queue();
             default ->
-                    channel.sendMessage("Esse código não existe nesse servidor").queue();
+                    channel.sendMessage("Esse comando não existe!").queue();
         }
     }
 }
