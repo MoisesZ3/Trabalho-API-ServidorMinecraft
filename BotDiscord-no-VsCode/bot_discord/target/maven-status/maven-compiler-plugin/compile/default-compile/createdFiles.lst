@@ -1,0 +1,8 @@
+com\moises\Comandos\Mensagem.class
+com\moises\Modelos\DadosServidor.class
+com\moises\Modelos\Players.class
+com\moises\Servicos\ConverteDadosServidor.class
+com\moises\Servicos\FormatadorMensagem.class
+com\moises\Servicos\IConverteDadosServidor.class
+com\moises\App.class
+com\moises\Servicos\ConsomeApi.class

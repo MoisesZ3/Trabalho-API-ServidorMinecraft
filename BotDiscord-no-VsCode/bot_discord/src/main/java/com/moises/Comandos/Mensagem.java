@@ -1,18 +1,18 @@
-package org.example.Comandos;
+package com.moises.Comandos;
+
+import org.jetbrains.annotations.NotNull;
+
+import com.moises.Modelos.DadosServidor;
+import com.moises.Modelos.Players;
+import com.moises.Servicos.ConsomeApi;
+import com.moises.Servicos.ConverteDadosServidor;
+import com.moises.Servicos.FormatadorMensagem;
 
 import net.dv8tion.jda.api.entities.channel.middleman.MessageChannel;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
-import org.example.Modelos.DadosServidor;
-import org.example.Modelos.Players;
-import org.example.Servicos.ConsomeApi;
-import org.example.Servicos.ConverteDadosServidor;
-import org.example.Servicos.FormatadorMensagem;
-import org.jetbrains.annotations.NotNull;
-
-public class Mensagens extends ListenerAdapter {
-
+public class Mensagem extends ListenerAdapter {
 
     @Override
     public void onMessageReceived(@NotNull MessageReceivedEvent event) {
